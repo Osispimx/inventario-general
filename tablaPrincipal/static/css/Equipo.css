@@ -1,0 +1,11 @@
+.formulario_general{
+    display: flex;
+    flex-wrap: wrap;
+}
+p {
+    flex: 0 0 48%; /* Los párrafos ocupan el 48% del ancho de su contenedor */
+    margin: 10px 1%; /* Margen para crear espacio entre los párrafos */
+}
+textarea{
+    resize:none;
+}

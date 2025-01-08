@@ -45,7 +45,7 @@ def verificar_equipo(request, pk):
 def generate_qr(request,pk):
     equipo = get_object_or_404(inventario, pk=pk)
     # El contenido que quieres codificar en el QR
-    data = f"https://inventario-general.onrender.com/inventario/{equipo.pk}/editar/"
+    data = f"https://inventario-general.onrender.com/detalles/{equipo.pk}"
 
     
     data_utf8 = data.encode('utf-8')
@@ -66,3 +66,6 @@ def qr_page(request,pk):
     return render(request, 'qr_page.html',{'equipo': equipo})
 
 
+def detalles(request,pk):
+    equipo = get_object_or_404(inventario, pk=pk)
+    return render(request, 'verEquipo.html',{'equipo': equipo})

@@ -45,7 +45,7 @@ def verificar_equipo(request, pk):
 def generate_qr(request,pk):
     equipo = get_object_or_404(inventario, pk=pk)
     # El contenido que quieres codificar en el QR
-    data = f"https://aae5-187-223-44-87.ngrok-free.app/inventario/{equipo.pk}/editar/"
+    data = f"https://inventario-general.onrender.com/inventario/{equipo.pk}/editar/"
 
     
     data_utf8 = data.encode('utf-8')

@@ -4,7 +4,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/Pagina_principal.css' %}">
 </head>
@@ -27,6 +27,7 @@
                 <td>Imei</td>
                 <td>Editar</td>
                 <td>Eliminar</td>
+                <td>Ver código <br>QR</td>
                 
             </tr>
             {% for equipo in equipos %}
@@ -44,6 +45,7 @@
                 <td>{{equipo.imei}}</td>
                 <td class="editarEliminar"> <a href="{% url 'editar' equipo.pk %}">Editar</a></td>
                 <td class="editarEliminar"> <a href="{% url 'eliminar' equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_page' equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

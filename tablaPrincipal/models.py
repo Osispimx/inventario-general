@@ -10,6 +10,6 @@ class inventario(models.Model):
     contrasena_ingreso= models.CharField(max_length=100)
     propietario=models.TextField()
     imei=models.TextField()
-
+    
     def __str__(self):
         return self.telefono

@@ -10,9 +10,43 @@
     <h1>Agregar Equipo</h1>
     <form method="post" class="formulario_general">
         {% csrf_token %}
-        {{ form.as_p }}
+        <p>
+            <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
+            {{ form.telefono }}
+            
+        </p>
+        <p>
+            <label for="{{ form.marca.id_for_label }}">Marca:</label>
+            {{ form.marca }}
+        </p>
+        <p>
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+        </p>
+        <p>
+            <label for="{{ form.en_servicio.id_for_label }}">En servicio:</label>
+            {{ form.en_servicio }}
+        </p>
+        <p>
+            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
+            {{ form.detalles }}
+        </p>
+        <p>
+            <label for="{{ form.contrasena_ingreso.id_for_label }}">Contraseña de ingreso:</label>
+            {{ form.contrasena_ingreso }}
+        </p>
+        <p>
+            <label for="{{ form.propietario.id_for_label }}">Propietario:</label>
+            {{ form.propietario }}
+        </p>
+        <p>
+            <label for="{{ form.imei.id_for_label }}">IMEI:</label>
+            {{ form.imei }}
+        </p>
+    <span class="botones">
         <button type="submit">Guardar</button>
+        <a href="{% url 'principal' %}">Volver a la lista</a>
+    </span>
     </form>
-    <a href="{% url 'principal' %}">Volver a la lista</a>
 </body>
 </html>

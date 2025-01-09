@@ -3,7 +3,6 @@
     padding: 0px;
     font-size: 20px;
 }
-
 #titulo{
     display: flex;
     justify-content: space-between;
@@ -58,7 +57,4 @@ tr td{
     text-decoration:underline;
     cursor: pointer;
     color: rgb(0, 0, 0);
-}
-#crear_producto:active{
-    border: 0px solid black;
 }

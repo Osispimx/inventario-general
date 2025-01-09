@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paraTodos.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/detalles.css' %}">
     <title>Document</title>
 </head>
@@ -20,6 +21,6 @@
     <p><span>Detalles:</span> {{equipo.detalles}}</p>
     <p><span>Propietario:</span> {{equipo.propietario}}</p>
     <p><span>IMEI:</span> {{equipo.imei}}</p>
-    <p>Para ver los detalles de la tabla tienes que <a href="">iniciar sesion</a></p>
+    <p ><a href="" class="regresar_actualizar">Para ver los detalles de la tabla tienes que iniciar sesion</a></p>
 </body>
 </html>

@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con Código QR</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paraTodos.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/qrcode.css' %}">
 </head>
-<body>
+<body id="codigo_qr_paginaPrincipal">
     <h1>Codigo qr generado</h1>
     <!-- Mostrar el código QR generado -->
-    <a href="{% url 'generate_qr' equipo.pk %}"><img src="{% url 'generate_qr' equipo.pk %}" alt="Código QR"></a>
-    <a href="{% url 'principal' %}">regresar a la página principal</a>
+    <div class="contenido">
+        <a href="{% url 'generate_qr' equipo.pk %}"><img id="codigo_qr" src="{% url 'generate_qr' equipo.pk %}" alt="Código QR"></a>
+        <span><a href="{% url 'principal' %}" class="regresar_actualizar ">Regresar a la página principal</a></span>
+    </div>
 </body>
 </html>

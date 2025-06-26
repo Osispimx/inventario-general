@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -62,7 +62,8 @@ TEMPLATES = [
     {
 
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/tablaPrincipal/templates',],
+        'DIRS': ['C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/tablaPrincipal/templates',
+                 'C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/inicio_sesion/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,3 +141,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     'https://*.ngrok-free.app',  # Agrega tu URL de ngrok aquí
 ]
+# Esto indica la URL a la que se redirigirá a los usuarios no autenticados
+
+
+
+LOGIN_URL = '/login/'
+# Puedes también definir una página a la que redirigir a los usuarios después de iniciar sesión
+LOGIN_REDIRECT_URL = 'principal/'
+LOGOUT_REDIRECT_URL = '/login/?next=/principal/'  # Redirige a la página de inicio después de hacer logout

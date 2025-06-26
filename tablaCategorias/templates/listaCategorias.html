@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" initial-scale=1.0">
-    <title>Equipos telefonicos</title>
+    <title>Lista de categorías</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/Pagina_principal.css' %}">
 </head>
 <body>
     <header id="titulo">
-    <h1>Inventario general de equipos telefonicos</h1>    
+    <h1>Categorías</h1>    
     <a id="crear_producto" href="{%url 'agregar'%}">Crear Producto</a>
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
@@ -20,16 +20,11 @@
     <main id="principal_tabla_inventario">
         <table id="tabla_gral_de_inventario">
             <tr id="cabecera_de_tabla">
-                <td>Teléfono</td>
-                <td>Marca</td>
-                <td>Email</td>
-                <td>Está en servicio</td>
+                <td>Categoría</td>
+                <td>Cantidad en stock</td>
                 <td>Detalles</td>
-                <td>Propietario</td>
-                <td>Imei</td>
                 <td>Editar</td>
                 <td>Eliminar</td>
-                <td>Ver código <br>QR</td>
                 
             </tr>
             {% for equipo in equipos %}
@@ -53,6 +48,7 @@
         </table>
     </main>
     <footer>
+        Inventario general de objetos
     </footer>
    
 </body>

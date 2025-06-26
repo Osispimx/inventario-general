@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "(raiz) inventario_de_equipo",
+			"path": "."
+		},
+		{
+			"path": "inventario_de_equipo"
+		},
+		{
+			"name": "app Cartegorías",
+			"path": "tablaCategorias"
+		},
+		{
+			"name": "app tablaPrincipal",
+			"path": "tablaPrincipal"
+		}
+	],
+	"settings": {}
+}

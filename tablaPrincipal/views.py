@@ -5,12 +5,13 @@ from io import BytesIO
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import inventario
 from .forms import inventarioform
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def lista_equipo(request):
     equipo = inventario.objects.all().order_by('id')
     return render(request, 'inventario.html', {'equipos': equipo})
-
+@login_required
 def crear_equipo(request):
     if request.method == "POST":
         form = inventarioform(request.POST)
@@ -20,7 +21,7 @@ def crear_equipo(request):
     else:
         form = inventarioform()
     return render(request, 'agregarEquipo.html', {'form': form})
-
+@login_required
 def editar_equipo(request, pk):
     equipo = get_object_or_404(inventario, pk=pk)
     if request.method == "POST":
@@ -31,7 +32,7 @@ def editar_equipo(request, pk):
     else:
         form = inventarioform(instance=equipo)
     return render(request, 'editar.html', {'form': form})
-
+@login_required
 def eliminar_equipo(request, pk):
     equipo = get_object_or_404(inventario, pk=pk)
     if request.method == "POST":

@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 def lista_equipo(request):
     equipo = inventario.objects.all().order_by('id')
     return render(request, 'inventario.html', {'equipos': equipo})
+
 @login_required
 def crear_equipo(request):
     if request.method == "POST":

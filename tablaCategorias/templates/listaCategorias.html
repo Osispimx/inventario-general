@@ -21,30 +21,137 @@
         <table id="tabla_gral_de_inventario">
             <tr id="cabecera_de_tabla">
                 <td>Categoría</td>
-                <td>Cantidad en stock</td>
-                <td>Detalles</td>
-                <td>Editar</td>
-                <td>Eliminar</td>
-                
+                <!--<td>Reportes</td> proximamente-->
+                <td>Ultima actualizacion</td>
+                <td>Departamento responsable</td>
+                <td>Detalles</td> <!-- link -->
             </tr>
-            {% for equipo in equipos %}
             <tr>
-                <td>{{equipo.telefono}}</td>
-                <td>{{equipo.marca}}</td>
-                <td>{{equipo.email}}</td>
-                {% if equipo.en_servicio is True%}
-                <td>Si está en servicio</td>
-                {% else %}
-                <td>No está en servicio</td>
-                {%endif%}
-                <td>{{equipo.detalles}}</td>
-                <td>{{equipo.propietario}}</td>
-                <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editar' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_page' equipo.pk %}">Ver QR</a></td>
+                <td>
+                    equipo de computo y comunicacion
+                </td>
+                <td>
+                    <!--inserte fecha-->
+                </td>
+                <td>
+                    Sistemas
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
             </tr>
-            {% endfor %}
+            <tr>
+                <td>
+                    Equipo telefonico
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Sistemas
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Equipo de operaciones
+                </td>
+                <td>
+                    <!-- insertar fecha -->
+                </td>
+                <td>
+                    operaciones
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    herramienta
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Varios departamentos
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Papelería
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    varios departamentos
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Vehículos
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Operaciones
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Uniformes
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Almacen
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Muebles
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Varios departamentos
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Otros
+                </td>
+                <td>
+                    <!-- inserte fecha -->
+                </td>
+                <td>
+                    Varios departamentos
+                </td>
+                <td>
+                    <a href="">Ver detalles</a>
+                </td>
+            </tr>
         </table>
     </main>
     <footer>
@@ -53,5 +160,12 @@
    
 </body>
 </html>
-<!--agregar botón de exportar a excel-->
-<!--agregar página de inicio de sesión y tabla de usuarios-->
+<!-- equipo de computo y comunicacion 
+equipo telefonico
+equipo de operaciones
+herramienta
+papelería
+vehiculos
+uniformes
+muebles
+otros-->

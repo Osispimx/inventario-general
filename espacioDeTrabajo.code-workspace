@@ -5,6 +5,7 @@
 			"path": "."
 		},
 		{
+			"name": "no app inventario_de_equipo",
 			"path": "inventario_de_equipo"
 		},
 		{
@@ -14,6 +15,10 @@
 		{
 			"name": "app tablaPrincipal",
 			"path": "tablaPrincipal"
+		}
+		{
+			"name": "app iniciar sesion",
+			"path": "iniciar_sesion"
 		}
 	],
 	"settings": {}

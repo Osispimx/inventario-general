@@ -9,5 +9,4 @@ urlpatterns = [
     path('generate_qr/<int:pk>', views.generate_qr, name='generate_qr'),
     path('qr_page/<int:pk>', views.qr_page, name='qr_page'),
     path('detalles/<int:pk>', views.detalles, name='detalles'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 ]

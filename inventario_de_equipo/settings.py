@@ -63,7 +63,7 @@ TEMPLATES = [
 
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/tablaPrincipal/templates',
-                 'C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/inicio_sesion/templates'],
+                 'C:/Users/siste/OneDrive/Documentos/VSCODE/inventario_de_equipo/iniciar_sesion/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

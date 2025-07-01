@@ -4,8 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def tablaCate():
-    cate=inventario.objects.all().order_by('id')
-        
+    pass
     
 def crearCate():
     pass

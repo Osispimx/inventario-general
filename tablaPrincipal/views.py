@@ -3,13 +3,13 @@ import pandas as pd
 from django.http import HttpResponse
 from io import BytesIO
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import inventario
+from .models import inventarioTel
 from .forms import inventarioform
 from django.contrib.auth.decorators import login_required
 
 @login_required
 def lista_equipo(request):
-    equipo = inventario.objects.all().order_by('id')
+    equipo = inventarioTel.objects.all().order_by('id')
     return render(request, 'inventario.html', {'equipos': equipo})
 
 @login_required
@@ -24,7 +24,7 @@ def crear_equipo(request):
     return render(request, 'agregarEquipo.html', {'form': form})
 @login_required
 def editar_equipo(request, pk):
-    equipo = get_object_or_404(inventario, pk=pk)
+    equipo = get_object_or_404(inventarioTel, pk=pk)
     if request.method == "POST":
         form = inventarioform(request.POST, instance=equipo)
         if form.is_valid():
@@ -35,7 +35,7 @@ def editar_equipo(request, pk):
     return render(request, 'editar.html', {'form': form})
 @login_required
 def eliminar_equipo(request, pk):
-    equipo = get_object_or_404(inventario, pk=pk)
+    equipo = get_object_or_404(inventarioTel, pk=pk)
     if request.method == "POST":
         equipo.delete()
         return redirect('principal')
@@ -45,7 +45,7 @@ def verificar_equipo(request, pk):
 
 #vista para generar el código qr
 def generate_qr(request,pk):
-    equipo = get_object_or_404(inventario, pk=pk)
+    equipo = get_object_or_404(inventarioTel, pk=pk)
     # El contenido que quieres codificar en el QR
     data = f"https://inventario-general.onrender.com/detalles/{equipo.pk}"
 
@@ -64,10 +64,10 @@ def generate_qr(request,pk):
 
 #vista para renderizar el qr
 def qr_page(request,pk):
-    equipo = get_object_or_404(inventario, pk=pk)
+    equipo = get_object_or_404(inventarioTel, pk=pk)
     return render(request, 'qr_page.html',{'equipo': equipo})
 
 
 def detalles(request,pk):
-    equipo = get_object_or_404(inventario, pk=pk)
+    equipo = get_object_or_404(inventarioTel, pk=pk)
     return render(request, 'verEquipo.html',{'equipo': equipo})

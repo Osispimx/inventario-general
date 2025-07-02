@@ -13,7 +13,7 @@ p{
 }
 body{
     font-family:sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(204, 204, 204);
 }
 .regresar_actualizar{
     display: flex;

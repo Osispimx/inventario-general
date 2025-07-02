@@ -1,5 +1,14 @@
 from django.db import models
 
+class baseItem(models.Model):
+    nombre = models.CharField(max_length=50)
+    en_servicio= models.BooleanField()
+    detalles= models.CharField(max_length=250)
+    class Meta:
+         abstract=True
+    def __str__(self):
+         return self.nombre
+
 class inventarioTel(models.Model):
 
     telefono = models.CharField(max_length=100)
@@ -13,64 +22,32 @@ class inventarioTel(models.Model):
     
     def __str__(self):
         return self.telefono
-    
-class equipoPcCom():
-    nombre = models.CharField(max_length=50)
+
+class equipoPcCom(baseItem):
     modelo= models.CharField(max_length=25)
-    en_servicio=models.BooleanField()
-    detalles=models.CharField(max_length=100)
     departamento=models.CharField(max_length=15)
     serie=models.CharField(max_length=50)
-    def __str__(self):
-        return self.nombre
 
-class operaciones():
-    nombre = models.CharField(max_length=50)
-    en_servicio=models.BooleanField()
-    detalles=models.CharField(max_length=100)
+class operaciones(baseItem):
     cantidad=models.IntegerField()
     serie=models.CharField(max_length=50)
-    def __str__(self):
-        return self.nombre
 
-class herramienta():
-    nombre = models.CharField(max_length=50)
-    en_servicio=models.BooleanField()
+class herramienta(baseItem):
     cantidad=models.IntegerField()
-    detalles=models.CharField(max_length=100)
-def __str__(self):
-        return self.nombre
 
 class papeleria():
     nombre = models.CharField(max_length=50)
     cantidad=models.IntegerField()
     detalles=models.CharField(max_length=100)
-def __str__(self):
-        return self.nombre
 
-class vehiculos():
-    nombre = models.CharField(max_length=50)
-    en_servicio=models.BooleanField()
-    detalles=models.CharField(max_length=100)
-def __str__(self):
-        return self.nombre
-class uniformes():
-    nombre = models.CharField(max_length=50)
+class vehiculos(baseItem):
+     pass
+
+class uniformes(baseItem):
     cantidad=models.IntegerField()
-    detalles=models.CharField(max_length=200)
-def __str__(self):
-        return self.nombre
-class muebles():
-    nombre = models.CharField(max_length=50)
-    en_servicio=models.BooleanField()
-    detalles=models.CharField(max_length=200)
-def __str__(self):
-        return self.nombre
 
-def otro():
-    nombre = models.CharField(max_length=50)
-    en_servicio=models.BooleanField()
+class muebles(baseItem):
+    pass
+
+def otro(baseItem):
     cantidad=models.IntegerField()#si hay
-    detalles=models.CharField(max_length=200)
-def __str__(self):
-        return self.nombre

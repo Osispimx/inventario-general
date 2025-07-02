@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tablaPrincipal',
+    'tablaCategorias',
+    'iniciar_sesion'
 ]
 
 MIDDLEWARE = [
@@ -137,9 +139,6 @@ if not DEBUG:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://*.ngrok-free.app',  # Agrega tu URL de ngrok aquí
-]
 # Esto indica la URL a la que se redirigirá a los usuarios no autenticados
 
 

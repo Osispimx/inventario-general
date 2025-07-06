@@ -3,8 +3,7 @@ from django.db import models
 class baseItem(models.Model):
     nombre = models.CharField(max_length=50)
     en_servicio= models.BooleanField()
-    detalles= models.TextField()
-    fecha=models.DateField()
+    detalles= models.DateField()
     class Meta:
          abstract=True
     def __str__(self):
@@ -48,4 +47,4 @@ class muebles(baseItem):
     pass
 
 def otro(baseItem):
-    cantidad=models.IntegerField()#si hay
+    cantidad=models.IntegerField()#por si hay

@@ -13,43 +13,43 @@
         {% csrf_token %}
         <p>
             <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
-            <input type="text" id="{{ form.telefono.id_for_label }}" name="{{ form.telefono.name }}" value="{{form.telefono.value}}" autocomplete="off">
+            <input type="text" class="borde" id="{{ form.telefono.id_for_label }}" name="{{ form.telefono.name }}" value="{{form.telefono.value}}" autocomplete="off">
         </p>
         <p>
             <label for="{{ form.marca.id_for_label }}">Marca:</label>
-            <input type="text" id="{{ form.marca.id_for_label }}" name="{{ form.marca.name }}" value="{{form.marca.value}}" autocomplete="off">
+            <input type="text" class="borde" id="{{ form.marca.id_for_label }}" name="{{ form.marca.name }}" value="{{form.marca.value}}" autocomplete="off">
         </p>
         <p>
             <label for="{{ form.email.id_for_label }}">Email:</label>
-            <input type="text" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" value="{{form.email.value}}" autocomplete="off">
+            <input type="text" class="borde" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" value="{{form.email.value}}" autocomplete="off">
         </p>
         <p>
             <label for="{{ form.en_servicio.id_for_label }}">En servicio:</label>
             {{ form.en_servicio }}
         </p>
-        <p>
-            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
-            {{form.detalles}}
-        </p>
-  
         <p class="password-container">
             <label for="{{ form.contrasena_ingreso.id_for_label }}">Contraseña de ingreso:</label>
-            <input type="password" id=" {{ form.contrasena_ingreso.id_for_label }}" class="password" name="{{ form.contrasena_ingreso.name }}"value="{{form.contrasena_ingreso.value}}" placeholder="Contraseña">
+            <input type="password" id=" {{ form.contrasena_ingreso.id_for_label }}" class="password borde" name="{{ form.contrasena_ingreso.name }}"value="{{form.contrasena_ingreso.value}}" placeholder="Contraseña">
             <button type="button" id="togglePassword">
                 <i class="fas fa-eye-slash"></i> <!-- Ojo cerrado al principio -->
             </button>
         </p>
         <p>
-            <label for="{{ form.propietario.id_for_label }}">Propietario:</label>
-            {{form.propietario}}
-        </p>
-        <p>
             <label for="{{ form.imei.id_for_label }}">IMEI:</label>
             {{form.imei}}
         </p>
+        <p>
+            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
+            {{form.detalles}}
+        </p>
+        
+        <p>
+            <label for="{{ form.propietario.id_for_label }}">Propietario:</label>
+            {{form.propietario}}
+        </p>
         <span class="botones">
             <button type="submit" class="regresar_actualizar">Actualizar</button>
-            <a class="regresar_actualizar" href="{% url 'principal' %}">Volver a la lista</a>
+            <a class="regresar_actualizar" href="{% url 'principalTel' %}">Volver a la lista</a>
         </span>
     </form>
     <script src="{% static 'js/editar.js' %}" async></script>

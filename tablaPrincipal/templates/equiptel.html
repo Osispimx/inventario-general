@@ -11,11 +11,8 @@
 <body>
     <header id="titulo">
     <h1>Inventario general de equipos telefonicos</h1>    
-    <a id="crear_producto" href="{%url 'agregar'%}">Crear Producto</a>
-    <form method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button id="crear_producto" type="submit">Cerrar sesión</button>
-    </form>    
+    <a id="crear_producto" href="{%url 'agregar'%}">Crear Producto</a>    
+    <a id="crear_producto" href="{%url 'principal'%}">Regresar a categorias</a>    
     </header>
     <main id="principal_tabla_inventario">
         <table id="tabla_gral_de_inventario">

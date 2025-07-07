@@ -18,7 +18,7 @@ def crear_equipo(request):
         form = inventarioform(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('principal')
+            return redirect('principalTel')
     else:
         form = inventarioform()
     return render(request, 'agregarEquipo.html', {'form': form})
@@ -29,7 +29,7 @@ def editar_equipo(request, pk):
         form = inventarioform(request.POST, instance=equipo)
         if form.is_valid():
             form.save()
-            return redirect('principal')
+            return redirect('principalTel')
     else:
         form = inventarioform(instance=equipo)
     return render(request, 'editar.html', {'form': form})
@@ -38,7 +38,7 @@ def eliminar_equipo(request, pk):
     equipo = get_object_or_404(inventarioTel, pk=pk)
     if request.method == "POST":
         equipo.delete()
-        return redirect('principal')
+        return redirect('principalTel')
     return render(request, 'eliminar.html', {'equipo': equipo})
 def verificar_equipo(request, pk):
     pass

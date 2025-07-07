@@ -1,9 +1,11 @@
 from django.db import models
+from django.utils import timezone
 
 class baseItem(models.Model):
     nombre = models.CharField(max_length=50)
     en_servicio= models.BooleanField()
-    detalles= models.DateField()
+    detalles= models.TextField()
+    fecha=models.DateField(default=timezone.now)
     class Meta:
          abstract=True
     def __str__(self):

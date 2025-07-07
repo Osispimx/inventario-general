@@ -11,7 +11,6 @@
 <body>
     <header id="titulo">
     <h1>Categorías</h1>    
-    <a id="crear_producto" href="{%url 'agregar'%}">Crear Producto</a>
     <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
         <button id="crear_producto" type="submit">Cerrar sesión</button>
@@ -51,7 +50,7 @@
                     Sistemas
                 </td>
                 <td>
-                    <a href="">Ver detalles</a>
+                    <a href="{%url 'principalTel'%}">Ver detalles</a>
                 </td>
             </tr>
             <tr>
@@ -62,7 +61,7 @@
                     <!-- insertar fecha -->
                 </td>
                 <td>
-                    operaciones
+                    Operaciones
                 </td>
                 <td>
                     <a href="">Ver detalles</a>
@@ -154,10 +153,6 @@
             </tr>
         </table>
     </main>
-    <footer>
-        Inventario general de objetos
-    </footer>
-   
 </body>
 </html>
 <!-- equipo de computo y comunicacion 

@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'inventario_de_equipo.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/inventarioobj',
+        default='postgresql://postgres:12345@localhost:5432/inventarioObj',
         conn_max_age=600
     )
 }

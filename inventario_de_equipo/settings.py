@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tablaPrincipal',
     'tablaCategorias',
-    'iniciar_sesion'
+    'tablaComputo',
+    'iniciar_sesion',
 ]
 
 MIDDLEWARE = [

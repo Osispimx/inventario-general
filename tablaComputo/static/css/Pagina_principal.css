@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+}
+#titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+#titulo h1{
+    font-family:sans-serif;
+    font-size: 25px;
+    
+}
+
+#crear_producto{ 
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 5px;
+    box-shadow: 1px 1px black;
+    transition: background-color .5s ease;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#crear_producto:hover{
+    background-color:rgb(151, 151, 151);
+    cursor: pointer;
+}
+
+#tabla_gral_de_inventario{
+    
+    width: 100%;
+    border-collapse: collapse; /* Combina bordes adyacentes */
+}
+#cabecera_de_tabla{
+    color: white;
+    background-color: rgb(48, 6, 84);
+
+}
+tr td{
+    
+    border: 1px solid rgb(146, 113, 113);
+    font-family:sans-serif;
+    padding: 10px;    
+    text-align: center;
+
+}
+
+.editarEliminar a{
+    text-decoration: none;
+    padding: 10px;
+    color: blue;
+}
+.editarEliminar:hover a{
+    text-decoration:underline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}

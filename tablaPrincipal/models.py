@@ -22,11 +22,6 @@ class inventarioTel(baseItem):
     def __str__(self):
         return self.telefono
 
-class equipoPcCom(baseItem):
-    modelo= models.CharField(max_length=25)
-    departamento=models.CharField(max_length=15)
-    serie=models.CharField(max_length=50)
-
 class operaciones(baseItem):
     cantidad=models.IntegerField()
     serie=models.CharField(max_length=50)

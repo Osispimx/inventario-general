@@ -11,7 +11,7 @@
 <body>
     <header id="titulo">
     <h1>Inventario general de equipos telefonicos</h1>    
-    <a id="crear_producto" href="{%url 'agregar'%}">Crear Producto</a>    
+    <a id="crear_producto" href="{%url 'agregarTel'%}">Crear Producto</a>    
     <a id="crear_producto" href="{%url 'principal'%}">Regresar a categorias</a>    
     </header>
     <main id="principal_tabla_inventario">
@@ -42,9 +42,9 @@
                 <td>{{equipo.detalles}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editar' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_page' equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'editarTel' equipo.pk %}">Editar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminarTel' equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_pageTel' equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

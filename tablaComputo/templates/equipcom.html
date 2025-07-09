@@ -17,34 +17,33 @@
     <main id="principal_tabla_inventario">
         <table id="tabla_gral_de_inventario">
             <tr id="cabecera_de_tabla">
-                <td>Teléfono</td>
-                <td>Marca</td>
-                <td>Email</td>
+                <td>Marca</td> 
                 <td>Está en servicio</td>
                 <td>Detalles</td>
                 <td>Propietario</td>
                 <td>Imei</td>
+                <td>Departamento</td>
+                <td>Contraseña</td>
                 <td>Editar</td>
                 <td>Eliminar</td>
-                <td>Ver código <br>QR</td>
-                
+                <td>Ver código <br>QR</td>  
             </tr>
             {% for equipo in equipos %}
             <tr>
-                <td>{{equipo.telefono}}</td>
                 <td>{{equipo.marca}}</td>
-                <td>{{equipo.email}}</td>
                 {% if equipo.en_servicio is True%}
                 <td>Si está en servicio</td>
                 {% else %}
                 <td>No está en servicio</td>
                 {%endif%}
                 <td>{{equipo.detalles}}</td>
+                
+                <td>{{equipo.departamento}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editar' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_page' equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'editarTel' equipo.pk %}">Editar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminarTel' equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_pageTel' equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

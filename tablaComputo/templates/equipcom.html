@@ -41,9 +41,9 @@
                 <td>{{equipo.departamento}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editarTel' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminarTel' equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_pageTel' equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'editarequip' equipo.pk %}">Editar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminarequip' equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_pageequip' equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

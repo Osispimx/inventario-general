@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'tablaCategorias',
     'tablaComputo',
     'iniciar_sesion',
+    'control',
 ]
 
 MIDDLEWARE = [

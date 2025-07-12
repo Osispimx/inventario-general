@@ -23,4 +23,6 @@ urlpatterns = [
     path('', include('tablaPrincipal.urls')),
     path('',include('iniciar_sesion.urls')),
     path('',include('tablaCategorias.urls')),
+    path('',include('tablaComputo.urls')),
+    path('',include('control.urls')),
 ]

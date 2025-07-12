@@ -13,7 +13,7 @@
     <h1>Codigo qr generado</h1>
     <!-- Mostrar el código QR generado -->
     <div class="contenido">
-        <a href="{% url 'generate_qrTel' equipo.pk %}"><img id="codigo_qr" src="{% url 'generate_qrTel' equipo.pk %}" alt="Código QR"></a>
+        <a href="{% url 'generate_qr' app_name=app_name model_name=model_name pk=pk %}"><img id="codigo_qr" src="{% url 'generate_qr' app_name=app_name model_name=model_name pk=pk %}" alt="Código QR"></a>
         <span><a href="{% url 'principalTel' %}" class="regresar_actualizar ">Regresar a la categoría principal</a></span>
     </div>
 </body>

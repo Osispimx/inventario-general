@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="es">
+<head>
+    <title>Agregar Equipo</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paraTodos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Equipo.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Agregar Equipo Telefonico</h1>
+    <form method="post" class="formulario_general">
+        {% csrf_token %}
+        <p>
+            <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
+            <input type="text" class="borde" id="{{ form.telefono.id_for_label }}" name="{{ form.telefono.name }}"  autocomplete="off">
+        </p>
+        <p>
+            <label for="{{ form.marca.id_for_label }}">Marca:</label>
+            <input type="text" class="borde" id="{{ form.marca.id_for_label }}" name="{{ form.marca.name }}" autocomplete="off">
+        </p>
+        <p>
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            <input type="text"class="borde" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" autocomplete="off">
+        </p>
+        <p>
+            <label for="{{ form.en_servicio.id_for_label }}">En servicio:</label>
+            {{ form.en_servicio }}
+        </p>
+        <p>
+            <label for="{{ form.contrasena_ingreso.id_for_label }}">Contraseña de ingreso:</label>
+            {{ form.contrasena_ingreso }}
+            <button type="button" id="togglePassword">
+                <i class="fas fa-eye-slash"></i>
+            </button>
+            {{ form.contrasena_ingreso.errors }}
+        </p>
+         <p>
+            <label for="{{ form.imei.id_for_label }}">IMEI:</label>
+            {{form.imei}}
+        </p>
+        <p>
+            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
+            {{form.detalles}}
+        </p>
+        <p>
+            <label for="{{ form.propietario.id_for_label }}">Propietario:</label>
+            {{form.propietario}}
+        </p>
+       
+    <span class="botones">
+        <button type="submit" class="regresar_actualizar">Guardar</button>
+        <a href="{% url 'principalTel' %}" class="regresar_actualizar">Volver a la lista</a>
+    </span>
+    </form>
+    
+    <script src="{% static 'js/editar.js' %}" async></script>
+</body>
+</html>

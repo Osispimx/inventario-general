@@ -4,7 +4,7 @@ from .models import equipoPcCom
 class inventarioform(forms.ModelForm):
     class Meta:
         model = equipoPcCom
-        fields =['marca', 'departamento', 'en_servicio', 'detalles', 'contrasena_ingreso', 'propietario', 'imei']
+        fields =['marca', 'departamento', 'imei', 'contrasena_ingreso', 'propietario', 'en_servicio', 'detalles']
         widgets = {
             'detalles': forms.Textarea(attrs={'class': 'borde'}),
             'propietario': forms.Textarea(attrs={'class': 'borde'}),

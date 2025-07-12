@@ -14,20 +14,16 @@
     <form method="post" class="formulario_general">
         {% csrf_token %}
         <p>
-            <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
-            <input type="text" class="borde" id="{{ form.telefono.id_for_label }}" name="{{ form.telefono.name }}"  autocomplete="off">
+            <label for="{{ form.marca.id_for_label }}">Marca</label>
+            <input type="text" class="borde" id="{{ form.marca.id_for_label }}" name="{{ form.marca.name }}"  autocomplete="off">
         </p>
         <p>
-            <label for="{{ form.marca.id_for_label }}">Marca:</label>
-            <input type="text" class="borde" id="{{ form.marca.id_for_label }}" name="{{ form.marca.name }}" autocomplete="off">
+            <label for="{{ form.departamento.id_for_label }}">Departamento:</label>
+            <input type="text" class="borde" id="{{ form.departamento.id_for_label }}" name="{{ form.departamento.name }}" autocomplete="off">
         </p>
         <p>
-            <label for="{{ form.email.id_for_label }}">Email:</label>
-            <input type="text"class="borde" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" autocomplete="off">
-        </p>
-        <p>
-            <label for="{{ form.en_servicio.id_for_label }}">En servicio:</label>
-            {{ form.en_servicio }}
+            <label for="{{ form.imei.id_for_label }}">IMEI:</label>
+            <input type="text"class="borde" id="{{ form.imei.id_for_label }}" name="{{ form.imei.name }}" autocomplete="off">
         </p>
         <p>
             <label for="{{ form.contrasena_ingreso.id_for_label }}">Contraseña de ingreso:</label>
@@ -37,22 +33,22 @@
             </button>
             {{ form.contrasena_ingreso.errors }}
         </p>
-         <p>
-            <label for="{{ form.imei.id_for_label }}">IMEI:</label>
-            {{form.imei}}
-        </p>
         <p>
-            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
-            {{form.detalles}}
+            <label for="{{ form.en_servicio.id_for_label }}">En servicio:</label>
+            {{ form.en_servicio }}
         </p>
         <p>
             <label for="{{ form.propietario.id_for_label }}">Propietario:</label>
             {{form.propietario}}
         </p>
+        <p>
+            <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
+            {{form.detalles}}
+        </p>
        
     <span class="botones">
         <button type="submit" class="regresar_actualizar">Guardar</button>
-        <a href="{% url 'principalTel' %}" class="regresar_actualizar">Volver a la lista</a>
+        <a href="{% url 'principalEqui' %}" class="regresar_actualizar">Volver a la lista</a>
     </span>
     </form>
     

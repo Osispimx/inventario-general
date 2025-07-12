@@ -17,7 +17,7 @@ def crear_equipo(request):
             return redirect('principalTel')
     else:
         form = inventarioform()
-    return render(request, 'agregarEquipo.html', {'form': form})
+    return render(request, 'agregarTel.html', {'form': form})
 @login_required
 def editar_equipo(request, pk):
     equipo = get_object_or_404(inventarioTel, pk=pk)
@@ -28,8 +28,8 @@ def editar_equipo(request, pk):
             return redirect('principalTel')
     else:
         form = inventarioform(instance=equipo)
-    return render(request, 'editar.html', {'form': form})
+    return render(request, 'editarTel.html', {'form': form})
 
 def detalles(request,pk):
     equipo = get_object_or_404(inventarioTel, pk=pk)
-    return render(request, 'verEquipo.html',{'equipo': equipo})
+    return render(request, 'verTel.html',{'equipo': equipo})

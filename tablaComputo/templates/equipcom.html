@@ -11,7 +11,7 @@
 <body>
     <header id="titulo">
     <h1>Inventario general de equipos de computo</h1>    
-    <a id="crear_producto" href="{%url 'agregar'%}">Crear equipo</a>    
+    <a id="crear_producto" href="{%url 'agregarEqui'%}">Crear equipo</a>    
     <a id="crear_producto" href="{%url 'principal'%}">Regresar a categorias</a>    
     </header>
     <main id="principal_tabla_inventario">
@@ -20,13 +20,12 @@
                 <td>Marca</td> 
                 <td>Está en servicio</td>
                 <td>Detalles</td>
-                <td>Propietario</td>
-                <td>Imei</td>
                 <td>Departamento</td>
-                <td>Contraseña</td>
+                <td>Propietario</td>
+                <td>imei</td>
                 <td>Editar</td>
                 <td>Eliminar</td>
-                <td>Ver código <br>QR</td>  
+                <td>Ver QR</td>  
             </tr>
             {% for equipo in equipos %}
             <tr>
@@ -40,9 +39,9 @@
                 <td>{{equipo.departamento}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editarequip' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminarequip' equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_pageequip' equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'editarEqui' equipo.pk %}">Editar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_page' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

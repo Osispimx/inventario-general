@@ -1,6 +1,0 @@
-.botones{
-    display: flex;
-}
-button:active, a:active{
-    border: 0px solid black;
-}

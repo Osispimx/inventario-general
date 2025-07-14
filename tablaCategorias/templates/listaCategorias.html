@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" initial-scale=1.0">
     <title>Lista de categorías</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/Pagina_principal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaCategorias/Pagina_principal.css' %}">
 </head>
 <body>
     <header id="titulo">
@@ -30,13 +30,13 @@
                     Equipo de computo y comunicacion
                 </td>
                 <td>
-                    <!--inserte fecha-->
+                    {{fechaPc}}
                 </td>
                 <td>
                     Sistemas
                 </td>
                 <td>
-                    <a href="{%url 'principalEqui'%}">Ver detalles</a>
+                    <a href="{%url 'tablaComputo:principalObjs'%}">Ver detalles</a>
                 </td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@
                     Sistemas
                 </td>
                 <td>
-                    <a href="{%url 'principalTel'%}">Ver detalles</a>
+                    <a href="{%url 'tablaPrincipal:principalObjs'%}">Ver detalles</a>
                 </td>
             </tr>
             <tr>

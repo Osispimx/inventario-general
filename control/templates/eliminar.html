@@ -3,8 +3,8 @@
 <html lang="es">
 <head>
     <title>Eliminar equipo</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/paraTodos.css' %}">
-    <link rel="stylesheet" href="{% static 'css/eliminar.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/control/paraTodos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/control/eliminar.css'%}">
 </head>
 <body>
     <h1>Eliminar equipo</h1>
@@ -13,7 +13,7 @@
         {% csrf_token %}
     <span class="botones">
         <button type="submit" class="regresar_actualizar">Eliminar</button>
-        <a href="{% url 'principalTel' %}" class="regresar_actualizar">Cancelar</a>
+        <a href="{% url app_name|add:':principalObjs' %}" class="regresar_actualizar">Cancelar</a>
     </span>
     </form>
     

@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" initial-scale=1.0">
     <title>Equipos telefonicos</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/Pagina_principal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaComputo/Pagina_principal.css' %}">
 </head>
 <body>
     <header id="titulo">
     <h1>Inventario general de equipos de computo</h1>    
-    <a id="crear_producto" href="{%url 'agregarEqui'%}">Crear equipo</a>    
+    <a id="crear_producto" href="{%url 'tablaComputo:agregarEqui'%}">Crear equipo</a>    
     <a id="crear_producto" href="{%url 'principal'%}">Regresar a categorias</a>    
     </header>
     <main id="principal_tabla_inventario">
@@ -39,9 +39,9 @@
                 <td>{{equipo.departamento}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'editarEqui' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_page' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'tablaComputo:editarEqui' equipo.pk %}">Editar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'tablaComputo:eliminar' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Eliminar</a></td>
+                <td class="editarEliminar"> <a href="{% url 'tablaComputo:qr_page' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}">Ver QR</a></td>
             </tr>
             {% endfor %}
         </table>

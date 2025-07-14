@@ -8,15 +8,19 @@ p{
     display: flex;
     flex: 0 0 48%; /* Los párrafos ocupan el 48% del ancho de su contenedor */
     margin: 10px 1%; /* Margen para crear espacio entre los párrafos */
-    align-items: center;
+    justify-content: flex-start;
 }
 textarea{
     resize:none;
     width: 300px;
     height: 150px;
 }
-.botones{
+.botones {
     display: flex;
+    flex-basis: 100%; /* ocupa toda la fila */
+    order: 99; /* para que quede después de los p */
+    margin-top: 20px;
+    justify-content: center;
 }
 #togglePassword {
     background: none;

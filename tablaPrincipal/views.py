@@ -14,7 +14,7 @@ def crear_equipo(request):
         form = inventarioform(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('principalTel')
+            return redirect('tablaPrincipal:principalObjs')
     else:
         form = inventarioform()
     return render(request, 'agregarTel.html', {'form': form})
@@ -25,7 +25,7 @@ def editar_equipo(request, pk):
         form = inventarioform(request.POST, instance=equipo)
         if form.is_valid():
             form.save()
-            return redirect('principalTel')
+            return redirect('tablaPrincipal:principalObjs')
     else:
         form = inventarioform(instance=equipo)
     return render(request, 'editarTel.html', {'form': form})

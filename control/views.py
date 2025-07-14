@@ -13,8 +13,8 @@ def eliminar_equipo(request, app_name,model_name, pk):
     equipo = get_object_or_404(modelo, pk=pk)
     if request.method == "POST":
         equipo.delete()
-        return redirect('principalTel')
-    return render(request, 'eliminar.html', {'equipo': equipo})
+        return redirect(f'{app_name}:principalObjs')
+    return render(request, 'eliminar.html', {'app_name': app_name,'equipo': equipo})
 def verificar_equipo(request, pk):
     pass
 

@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tablaPrincipal',
-    'tablaCategorias',
     'tablaComputo',
+    'tablaCategorias',
     'iniciar_sesion',
     'control',
 ]
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'inventario_de_equipo.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:12345@localhost:5432/inventarioObj',
+        default='postgresql://postgres:postgres@localhost:5432/inventarioobj',
         conn_max_age=600
     )
 }

@@ -5,8 +5,8 @@
 <head>
     <title>Agregar Equipo</title>
     
-    <link rel="stylesheet" type="text/css" href="{% static 'tablaComputo/paraTodos.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'tablaComputo/Equipo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaComputo/paraTodos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tablaComputo/Equipo.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -45,6 +45,7 @@
             <label for="{{ form.detalles.id_for_label }}">Detalles:</label>
             {{form.detalles}}
         </p>
+        <p></p>
     <span class="botones">
         <button type="submit" class="regresar_actualizar">Guardar</button>
         <a href="{% url 'tablaComputo:principalObjs' %}" class="regresar_actualizar">Volver a la lista</a>

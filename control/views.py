@@ -23,7 +23,7 @@ def generate_qr(request, app_name,model_name,pk):
     modelo=apps.get_model(app_name,model_name)
     equipo = get_object_or_404(modelo, pk=pk)
     # El contenido que quieres codificar en el QR
-    data = f"https://inventario-general.onrender.com/{app_name}/detalles/{pk}/"
+    data = f"https://inventario-general.onrender.com/{app_name}/detalles/{pk}"
 
     
     data_utf8 = data.encode('utf-8')

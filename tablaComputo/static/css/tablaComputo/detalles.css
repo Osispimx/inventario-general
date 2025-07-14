@@ -5,6 +5,8 @@ body{
     font-family:sans-serif;
     background-color: initial;
     color: initial;
+    margin: 5px;
+    padding: 5px;
 }
 .detalles{
     display: flex;

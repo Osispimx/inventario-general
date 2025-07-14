@@ -1,11 +1,6 @@
 p span{
     font-weight: 700;
 }
-body{
-    font-family:sans-serif;
-    background-color: initial;
-    color: initial;
-}
 .detalles{
     display: flex;
     flex-direction: column;

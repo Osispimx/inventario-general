@@ -14,7 +14,7 @@ def crear_equipo(request):
         form = inventarioform(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('principalTel')
+            return redirect('tablaComputo:principalObjs')
     else:
         form = inventarioform()
     return render(request, 'agregarEquipo.html', {'form': form})
@@ -25,10 +25,10 @@ def editar_equipo(request, pk):
         form = inventarioform(request.POST, instance=equipo)
         if form.is_valid():
             form.save()
-            return redirect('principalEqui')
+            return redirect('tablaComputo:principalObjs')
     else:
         form = inventarioform(instance=equipo)
-    return render(request, 'editar.html', {'form': form})
+    return render(request, 'editarEquipo.html', {'form': form})
 
 def detalles(request,pk):
     equipo = get_object_or_404(equipoPcCom, pk=pk)

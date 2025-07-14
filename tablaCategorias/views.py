@@ -10,4 +10,3 @@ def tablaCate(request):
     fechaTel = datoTel.fecha.strftime('%Y-%m-%d') if datoTel and datoTel.fecha else "Sin fecha"
     fechaPc = datoPc.fecha.strftime('%Y-%m-%d') if datoPc and datoPc.fecha else "Sin fecha"
     return render(request, 'listaCategorias.html',{'fechaTel':fechaTel,'fechaPc':fechaPc})
-    

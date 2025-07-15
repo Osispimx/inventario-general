@@ -58,3 +58,9 @@ tr td{
     cursor: pointer;
     color: rgb(0, 0, 0);
 }
+p{
+    font-family:sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+}

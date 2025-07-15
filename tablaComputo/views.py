@@ -5,9 +5,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def lista_equipo(request):
-    equipos_totales=equipoPcCom.objects.all()
-    todos=equipos_totales.count()
     equipo = equipoPcCom.objects.all().order_by('id')
+    todos=equipo.count()
     return render(request, 'equipcom.html', {'equipos': equipo,'todos':todos})
 
 @login_required

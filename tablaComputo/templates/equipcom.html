@@ -41,7 +41,7 @@
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
                 <td class="editarEliminar"> <a href="{% url 'tablaComputo:editarEqui' equipo.pk %}"><span class="material-symbols-outlined"> edit </span></a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}"><span class="material-symbols-outlined">edit</span></a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}"><span class="material-symbols-outlined">delete</span></a></td>
                 <td class="editarEliminar"> <a href="{% url 'qr_page' app_name='tablaComputo' model_name='equipoPcCom' pk=equipo.pk %}"><span class="material-symbols-outlined">qr_code</span></a></td>
             </tr>
             {% endfor %}

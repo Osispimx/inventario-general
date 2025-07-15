@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" initial-scale=1.0">
     <title>Equipos telefonicos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/tablaPrincipal/Pagina_principal.css' %}">
 </head>
 <body>
@@ -42,9 +43,9 @@
                 <td>{{equipo.detalles}}</td>
                 <td>{{equipo.propietario}}</td>
                 <td>{{equipo.imei}}</td>
-                <td class="editarEliminar"> <a href="{% url 'tablaPrincipal:editarTel' equipo.pk %}">Editar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaPrincipal' model_name='InventarioTel' pk=equipo.pk %}">Eliminar</a></td>
-                <td class="editarEliminar"> <a href="{% url 'qr_page' app_name='tablaPrincipal' model_name='InventarioTel' pk=equipo.pk %}">Ver QR</a></td>
+                <td class="editarEliminar"> <a href="{% url 'tablaPrincipal:editarTel' equipo.pk %}"><span class="material-symbols-outlined"> edit </span></a></td>
+                <td class="editarEliminar"> <a href="{% url 'eliminar' app_name='tablaPrincipal' model_name='InventarioTel' pk=equipo.pk %}"><span class="material-symbols-outlined">edit</span></a></td>
+                <td class="editarEliminar"> <a href="{% url 'qr_page' app_name='tablaPrincipal' model_name='InventarioTel' pk=equipo.pk %}"><span class="material-symbols-outlined">qr_code</span></a></td>
             </tr>
             {% endfor %}
         </table>
